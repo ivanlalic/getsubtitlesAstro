@@ -9,6 +9,6 @@ import netlify from "@astrojs/netlify/functions";
 export default defineConfig({
   site: 'https://lexingtonthemes.com',
   integrations: [tailwind(), sitemap()],
-  output: 'hybrid',
+  output: 'server',
   adapter: netlify()
 });
