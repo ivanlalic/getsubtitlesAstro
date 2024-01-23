@@ -9,7 +9,7 @@
           <div>
             <h2
               class="font-medium leading-tight text-black text-xl font-display">
-              Sign up to AstroSaaS
+              Sign up to Getsubtitles
             </h2><div class="py-3">
               <span class="w-full inline-flex relative mt-3 z-0"
                 ><button
@@ -42,53 +42,36 @@
                   <div class="w-full border-t border-gray-300"></div>
                 </div><div class="flex relative justify-center">
                   <span class="bg-white text-sm px-2 text-gray-500"
-                    >Or continue with</span
+                    >Or register with</span
                   >
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <form action="https://submit-form.com/r4PIGvAB">
+        <!-- <form action="/api/auth/register" method="post">
           <input name="hidden" autocomplete="false" style="display:none" />
           <input name="_redirect" type="hidden" value="#" /><div
             class="space-y-6">
-            <div class="w-full flex flex-row gap-3">
-              <div class="w-full">
-                <label class="sr-only" for="first_name">First name</label>
-                <input
-                  class="w-full focus:outline-none border py-3 appearance-none h-12 bg-gray-50 block border-gray-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-gray-400 px-3 rounded-xl sm:text-sm text-accent-500"
-                  id="first_name"
-                  name="first_name"
-                  autocomplete="given-name"
-                  required=""
-                />
-              </div><div class="w-full">
-                <label class="sr-only" for="last_name">Last name</label><input
-                  class="w-full focus:outline-none border py-3 appearance-none h-12 bg-gray-50 block border-gray-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-gray-400 px-3 rounded-xl sm:text-sm text-accent-500"
-                  id="last_name"
-                  name="last_name"
-                  autocomplete="family-name"
-                  required=""
-                />
-              </div>
             </div><div>
-              <label class="sr-only" name="name"
-                >User name or email Adress</label
+              <label class="sr-only" for="email">Email</label
               >
               <input
-                class="w-full focus:outline-none border py-3 appearance-none h-12 bg-gray-50 block border-gray-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-gray-400 px-3 rounded-xl sm:text-sm text-accent-500"
-                placeholder="Type here..."
+                class="w-full mb-4 focus:outline-none border py-3 appearance-none h-12 bg-gray-50 block border-gray-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-gray-400 px-3 rounded-xl sm:text-sm text-accent-500"
+                type="email"
+                id="email"
+                placeholder="Email"
               />
             </div><div class="col-span-full">
-              <label class="sr-only" name="company">Password</label>
+              <label class="sr-only" for="company">Password</label>
               <input
                 class="w-full focus:outline-none border py-3 appearance-none h-12 bg-gray-50 block border-gray-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-gray-400 px-3 rounded-xl sm:text-sm text-accent-500"
-                placeholder="Type password here..."
+                placeholder="Password"
+                name="password"
                 type="password"
               />
             </div><div class="flex">
-              <div class="flex items-start">
+              <div class="flex items-start mt-4">
                 <input
                   class="text-accent-500 focus:ring-accent-500 border-accent-500 h-4 rounded w-4"
                   id="remember-me"
@@ -112,16 +95,45 @@
                   >
                 </label>
               </div>
-            </div><div class="col-span-full">
+            </div><div class="col-span-full mt-4">
               <button
                 class="items-center justify-center h-12 rounded-xl focus-visible:outline-black focus:outline-none inline-flex bg-black border-2 border-black duration-200 focus-visible:ring-black hover:bg-transparent hover:border-black hover:text-black px-6 py-3 text-center text-white w-full"
                 type="submit">Create an account</button
               >
-            </div><div class="space-y-4">
+        </form> -->
+        <form action="/api/auth/register" method="post">
+          <input name="hidden" autocomplete="false" style="display:none" />
+          <input name="_redirect" type="hidden" value="#" /><div
+            class="space-y-6">
+            </div><div>
+              <label class="sr-only" for="email">Email</label
+                >
+                <input class="w-full mb-4 focus:outline-none border py-3 appearance-none h-12 bg-gray-50 block border-gray-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-gray-400 px-3 rounded-xl sm:text-sm text-accent-500"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"/>
+          </div><div class="col-span-full">
+          <label class="sr-only" for="password">Password</label>
+          <input
+                class="w-full focus:outline-none border py-3 appearance-none h-12 bg-gray-50 block border-gray-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-gray-400 px-3 rounded-xl sm:text-sm text-accent-500"
+                placeholder="Password"
+                name="password"
+                id="password"
+                type="password"
+              />
+            </div><div class="col-span-full mt-4">
+              <button
+                class="items-center justify-center h-12 rounded-xl focus-visible:outline-black focus:outline-none inline-flex bg-black border-2 border-black duration-200 focus-visible:ring-black hover:bg-transparent hover:border-black hover:text-black px-6 py-3 text-center text-white w-full"
+                type="submit">Create an account</button
+              >
+        </form>
+
+            </div><div class="space-y-4 mt-4">
               <p class="font-medium text-sm leading-tight text-black">
                 Already a member? <a
                   class="text-accent-500 hover:text-accent-400 ml-3"
-                  href="/login">Sign in</a
+                  href="/signin">Sign in</a
                 >
               </p><p class="font-medium text-xs leading-tight text-gray-500">
                 This site is protected by reCAPTCHA and the Google Privacy
@@ -129,7 +141,7 @@
               </p>
             </div>
           </div>
-        </form>
+        
       </div>
     </div>
   </div>
