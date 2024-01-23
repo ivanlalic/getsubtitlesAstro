@@ -9,7 +9,7 @@
           <div>
             <h2
               class="font-medium leading-tight text-black text-xl font-display">
-              Log in to AstroSaaS
+              Log in to GetSubtitles
             </h2><div class="py-3">
               <span class="w-full inline-flex relative mt-3 z-0"
                 ><button
@@ -42,30 +42,33 @@
                   <div class="w-full border-t border-gray-300"></div>
                 </div><div class="flex relative justify-center">
                   <span class="text-sm bg-white px-2 text-gray-500"
-                    >Or continue with</span
-                  >
+                    >Or continue with</span>
                 </div>
               </div>
             </div>
           </div>
-        </div><form action="https://submit-form.com/r4PIGvAB">
+        </div>
+        <form action="/api/auth/signin" method="post">
           <input name="hidden" autocomplete="false" style="display:none" />
           <input name="_redirect" type="hidden" value="#" /><div
             class="space-y-6">
             <div>
-              <label class="sr-only" name="name"
-                >User name or email Adress</label
-              >
+              <label for="email" class="sr-only">Email</label>
               <input
                 class="w-full focus:outline-none border py-3 appearance-none h-12 bg-gray-50 block border-gray-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-gray-400 px-3 rounded-xl sm:text-sm text-accent-500"
-                placeholder="Type here..."
+                placeholder="Email"
+                type="email"
+                name="email"
+                id="email"
               />
             </div><div class="col-span-full">
-              <label class="sr-only" name="company">Password</label>
+              <label class="sr-only" for="password">Password</label>
               <input
                 class="w-full focus:outline-none border py-3 appearance-none h-12 bg-gray-50 block border-gray-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-gray-400 px-3 rounded-xl sm:text-sm text-accent-500"
-                placeholder="Type password here..."
+                placeholder="Password"
                 type="password"
+                name="password"
+                id="password"
               />
             </div><div class="flex items-center justify-between">
               <div class="flex items-center">
@@ -80,15 +83,15 @@
                   for="remember-me">Remember me</label
                 >
               </div><div class="text-sm">
-                <a
+                <!-- <a
                   class="font-medium hover:text-accent-500 text-accent-500"
                   href="#">Forgot your password?</a
-                >
+                > -->
               </div>
             </div><div class="col-span-full">
               <button
                 class="items-center h-12 justify-center rounded-xl focus-visible:outline-black focus:outline-none inline-flex bg-black border-2 border-black duration-200 focus-visible:ring-black hover:bg-transparent hover:border-black hover:text-black px-6 py-3 text-center text-white w-full"
-                type="submit">Submit your request</button
+                type="submit">Log In</button
               >
             </div><div>
               <p class="font-medium text-sm leading-tight text-black">

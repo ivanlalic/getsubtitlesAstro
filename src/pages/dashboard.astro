@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { supabase } from "../lib/supabase";
+import Navigation from "../components/global/Navigation.astro";
 
 const { cookies, redirect } = Astro;
 
@@ -8,7 +9,7 @@ const accessToken = cookies.get("sb-access-token");
 const refreshToken = cookies.get("sb-refresh-token");
 
 if (!accessToken || !refreshToken) {
-  return redirect("/signin");
+  return redirect("/login");
 }
 
 const { data, error } = await supabase.auth.setSession({
@@ -29,12 +30,13 @@ if (error) {
     path: "/",
   });
 
-  return redirect("/signin");
+  return redirect("/login");
 }
 
 const email = data?.user?.email;
 ---
 <BaseLayout title="dashboard">
+  <Navigation />
   <h1>Welcome {email}</h1>
   <p>We are happy to see you here</p>
   <form action="/api/auth/signout">
