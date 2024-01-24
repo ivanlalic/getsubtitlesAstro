@@ -17,11 +17,6 @@ const { data, error } = await supabase.auth.setSession({
   access_token: accessToken.value,
 });
 
-// In the SERVER
-const { data: { user } } = await supabase.auth.getUser()
-console.log(user);
-
-
 if (error) {
   cookies.delete("sb-access-token", {
     path: "/",
@@ -32,8 +27,9 @@ if (error) {
 
   return redirect("/login");
 }
-
 const email = data?.user?.email;
+console.log(email);
+
 ---
 <BaseLayout title="dashboard">
   <Navigation />
